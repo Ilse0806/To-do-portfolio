@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;}
+
+html{
+    font-size:3rem;
+}
+
+#todos{
+    padding:1rem;
+}
+
+::backdrop {
+    background-color: black
+    opacity: 0.95;
+  }
+
+dialog {
+    margin-left: 500px;
+    margin-top: 200px;
+    height: 300px;
+    width: 500px;
+}
+
+.buttonDiv{
+    margin-top: 125px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 25% 50% 25%;
+    align-content: center;
+}
+.dialogButton {
+    background-color: pink;
+}
