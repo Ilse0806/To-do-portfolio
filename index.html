@@ -3,27 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test to do's</title>
+    <title>asdfghjkl.com</title>
+    <!--Link to stylesheet-->
     <link rel="stylesheet" href="style.css">
+
+    <!--Link to roboto font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!--Link to raleway font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <h1>Todo's</h1>
-
-    <ul id="todos">
-    </ul>
-
+    <h1>Tasks</h1>
+    <!--All today tasks come in this <ul>-->
+    <div class="orderDays">
+        <div class="orderToday">
+            <h2 id="todayDate">Today</h2>
+            <ul id="todayToDoList">
+            </ul>
+        </div>
+    <!--Create new tasks in dialog-->
+        <div class="orderTomorrow">
+            <h2 id="tomorrowDate">Tomorrow</h2>
+            <ul id="tomorrowToDoList">
+            </ul>
+        </div>
+        <div class="orderDayAfter">
+            <h2 id="dayAfterDate">Day after tomorrow</h2>
+            <ul id="dayAfterToDoList">
+            </ul>
+        </div>
+        <div class="dontForget">
+            <h2 id="BeObvious">DON'T FORGET:</h2>
+            <ul id="dontForgetThese">
+            </ul>
+        </div>   
+    </div>
+ 
     <dialog>
-        <div class="buttonDiv">
-        <button class="dialogButton" autofocus>Close</button>
-        <input type="text" name="newTodo" id="inputNewTodo"/>
-        <button class="dialogButton" id="newTodo">Maak een todo voor mij!</button>
+        <div class="NewTaskDialog">
+            <button class="TaskDialogButton" autofocus>Close</button>
+            <input type="text" name="newTodo" id="AddTask"/>
+            <button class="TaskDialogButton" id="newTodo">Add new task</button>
+            <form>
+                <input type="radio" name="whichDay" id="chooseToday" class="pickDay"/>
+                <label>Today</label> <br>
+                <input type="radio" name="whichDay" id="chooseTomorrow" class="pickDay"/> 
+                <label>Tomorrow</label> <br>
+                <input type="radio" name="whichDay" id="chooseDayAfter" class="pickDay"/>
+                <label>Day after tomorrow</label> <br>    
+            </form>
         </div>
     </dialog>
-      <button>Maak een nieuwe taak</button>
+    <button id="MakeTask">Create a new task</button>
 
-
-  
+    <dialog id="MrManager">
+        <div class="ManageTask">
+            <h3>task:</h3>
+            <input name="whichTask" type="text" id="whichTask" readonly="readonly"/>
+            <div class="checkboxDontForget">
+                <input name="DontForgetOrNot" type="checkbox" id="importantOrNot"/>
+                <label for="importantOrNot">Don't forget list</label>
+            </div>
+            <button id="deleteButton" class="deleteButtons">Delete task</button>
+            <button class="BigBoiManager" id="closeManager" autofocus>Close</button>
+            <button class="BigBoiManager" id="applyManager">Apply changes</button>
+        </div>
+    </dialog>
 
     <script src="script.js"></script>
 </body>

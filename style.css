@@ -1,33 +1,153 @@
-*{
-    margin:0;
-    padding:0;}
-
-html{
-    font-size:3rem;
+html {
+    background-color: black;
+}
+h1,
+h2,
+h3,
+label,
+p {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;  
+  font-style: normal;
+  color: white;
+}
+h1 {
+  font-weight: 700;
+}
+h2 {
+  font-weight: 550;
+}
+h3{
+  font-weight: 400;
+}
+p,
+label {
+  font-weight: 500;
+}
+ul, li, input {
+  color: white;
+  font-family: "raleway", monospace;
+  font-weight: 350;
 }
 
-#todos{
-    padding:1rem;
+.orderDays {
+  display: flex;
+}
+
+.orderToday,
+.orderTomorrow,
+.orderDayAfter {
+  width: 500px;
+  height: 400px;
+}
+
+.dontForget {
+  background-color: red;
+  height: 750px;
+  width: 450px; 
+}
+
+#BeObvious {
+  background-color: red;
+  margin-left: 15px;
 }
 
 ::backdrop {
-    background-color: black
-    opacity: 0.95;
-  }
+  background-color: rgb(109, 45, 106);
+  opacity: 0.75;
+}
 
 dialog {
-    margin-left: 500px;
-    margin-top: 200px;
-    height: 300px;
-    width: 500px;
+  margin-left: 200px;
+  margin-top: 200px;
+  height: 400px;
+  width: 650px;
+  background-color: black;
 }
 
-.buttonDiv{
-    margin-top: 125px;
-    display: grid;
-    grid-template: 1fr 1fr 1fr / 25% 50% 25%;
-    align-content: center;
+.NewTaskDialog{
+  margin-top: 125px;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 25% 50% 25%;
+  align-content: center;
 }
-.dialogButton {
-    background-color: pink;
+
+#MrManager {
+  margin-left: 200px;
+  margin-top: 200px;
+  height: 400px;
+  width: 650px;
+  background-color: hotpink;
+}
+
+.ManageTask {
+  display: grid;
+  height: 400px;
+  width: 650px;
+  grid-template: repeat(5, 1fr) / 25% 50% 25%;
+}
+
+#closeManager {
+  grid-row: 5;
+}
+#applyManager{
+  grid-row: 5;
+  grid-column: 3;
+}
+
+.TaskDialogButton,
+.BigBoiManager,
+.deleteButtons {
+  background-color: pink;
+}
+
+button {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.todayToDos, 
+.tomorrowToDos,
+.dayAfterToDos,
+.ManagedayAfterToDos,
+.ManagetomorrowToDos,
+.ManagetodayToDos,
+.ManageToDos {
+  color: pink;
+  background-color: blueviolet;
+  margin-left: 10px;
+}
+
+#MakeTask {
+  color: white;
+  background-color: brown;
+}
+
+#AddTask,
+#whichTask {
+  color: black;
+  background-color: white;
+}
+
+form {
+  width: 475px;
+}
+
+.pickDay,
+#chooseToday {
+  justify-content: center;
+  margin-left: 10px;
+}
+
+#whichTask {
+  font-size:x-large;
+  background-color: grey;
+  color: white;
+}
+
+.checkboxDontForget {
+  grid-area: 2 / 2 / span 1 / span 1 ;
+  margin-top: 10%;
 }
